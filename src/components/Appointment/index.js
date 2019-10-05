@@ -8,7 +8,6 @@ import Form from "components/Appointment/Form";
 import Status from "components/Appointment/Status";
 import Confirm from "components/Appointment/Confirm";
 import Error from "components/Appointment/Error";
-import { typeParameterInstantiation } from "@babel/types";
 
 
 const EMPTY = "EMPTY";
@@ -33,6 +32,9 @@ export default function Appointment(props) {
       student: name,
       interviewer
     };
+    // if(!props.interview.name) {
+    //  back()
+    // }
     transition(SAVING)
     props.bookInterview (props.id, interview)
     .then(() => {
@@ -41,6 +43,7 @@ export default function Appointment(props) {
     .catch((error) => {
       transition(ERROR_SAVE, true)
     })
+
   }
 
   function destroy() {
@@ -50,7 +53,7 @@ export default function Appointment(props) {
       transition(EMPTY)
      })
      .catch((error) => {
-      transition(ERROR_SAVE, true)
+      transition(ERROR_DELETE, true)
     })
   }
 
