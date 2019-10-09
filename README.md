@@ -16,7 +16,7 @@ Scheduler is a full stack web application built with React, Node and Axios that 
 
 !["Empty spot"](https://github.com/kirillradaev/scheduler-/blob/master/docs/empty-spot.png?raw=true)
 
-###### Empty form for booking
+###### Empty booking form
 
 !["Empty form for booking"](https://github.com/kirillradaev/scheduler-/blob/master/docs/empty-interview-form.png?raw=true)
 
@@ -24,11 +24,11 @@ Scheduler is a full stack web application built with React, Node and Axios that 
 
 !["Booking process"](https://github.com/kirillradaev/scheduler-/blob/master/docs/booking-process.png?raw=true)
 
-###### Form after booking has been saved
+###### Form after the interviewe has been booked
 
-!["Form after booking has been saved"](https://github.com/kirillradaev/scheduler-/blob/master/docs/show-from.png?raw=true)
+!["Interview has been booked"](https://github.com/kirillradaev/scheduler-/blob/master/docs/show-from.png?raw=true)
 
-###### Confirmation massege when users click "delete" button
+###### Confirmation massege when users click the "delete" button
 
 !["Confirmation message"](https://github.com/kirillradaev/scheduler-/blob/master/docs/cancel-confirmation.png?raw=true)
 
