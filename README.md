@@ -24,7 +24,7 @@ Scheduler is a full stack web application built with React, Node and Axios that 
 
 !["Booking process"](https://github.com/kirillradaev/scheduler-/blob/master/docs/booking-process.png?raw=true)
 
-###### Form after the interviewe has been booked
+###### Form after the interview has been booked
 
 !["Interview has been booked"](https://github.com/kirillradaev/scheduler-/blob/master/docs/show-from.png?raw=true)
 
