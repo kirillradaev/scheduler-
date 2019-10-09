@@ -1,8 +1,11 @@
-import React, {useState, useEffect} from "react";
-import axios from "axios";
+import React from "react";
 import DayList from "./DayList";
 import Appointment from "components/Appointment";
-import { getAppointmentsForDay, getInterview, getInterviewersForDay } from "helpers/selectors";
+import {
+  getAppointmentsForDay,
+  getInterview,
+  getInterviewersForDay
+} from "helpers/selectors";
 import useApplicationData from "hooks/useApplicationData";
 
 import "components/Application.scss";
@@ -24,7 +27,7 @@ export default function Application(props) {
           className="sidebar--centered"
           src="images/logo.png"
           alt="Interview Scheduler"
-         />
+        />
         <hr className="sidebar__separator sidebar--centered" />
         <nav className="sidebar__menu">
           <DayList days={state.days} day={state.day} setDay={setDay} />
@@ -36,22 +39,21 @@ export default function Application(props) {
         />
       </section>
       <section className="schedule">
-        { appointments.map((appointment, i)=> {
+        {appointments.map((appointment, i) => {
           return (
-          <Appointment
-          key={appointment.id}
-          id = {appointment.id}
-          time = { appointment.time}
-          interview = {getInterview(state, appointment.interview)}
-          interviewers = {getInterviewersForDay(state, state.day)}
-          bookInterview = {bookInterview}
-          cancelInterview = {cancelInterview}
-          />
-          );})}
+            <Appointment
+              key={appointment.id}
+              id={appointment.id}
+              time={appointment.time}
+              interview={getInterview(state, appointment.interview)}
+              interviewers={getInterviewersForDay(state, state.day)}
+              bookInterview={bookInterview}
+              cancelInterview={cancelInterview}
+            />
+          );
+        })}
         <Appointment key="last" time="5pm" />
       </section>
     </main>
   );
 }
-
-
